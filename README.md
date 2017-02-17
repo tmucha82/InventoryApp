@@ -1,31 +1,43 @@
-# InventoryApp
+# ng-book 2: Inventory App
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+> An Angular 2 inventory app
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Dependencies
 
-## Code scaffolding
+Before you get started, you need to make sure you have node.js installed. We'll be using `npm` to run this project (`npm` will be installed when you install node.js). You can [install node.js here](https://nodejs.org/en/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Installing
 
-## Build
+First, you need to make sure you install the dependencies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+npm install
+```
 
-## Running unit tests
+Then we will 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- compile our TypeScript code and
+- host the app on local development server 
 
-## Running end-to-end tests
+by running the command:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+```
+npm run go
+```
 
-## Deploying to GitHub Pages
+Then visit [http://localhost:8080](http://localhost:8080) in your browser. You should see an application with the header `Angular 2 Simple Reddit`. 
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+## Getting Help
 
-## Further help
+In the case where it doesn't work, the first thing to try is looking at the developer console in your browser.
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If that doesn't work, [come chat with us](https://gitter.im/ng-book/ng-book)!
+
+## Other Files (advanced)
+
+> What are all the other files in this repo?
+
+- `tsconfig.json` - this is instructions for our TypeScript compiler
+- `tslint.json` - `tslint` is a program and helps enforce rules about code style. The `tslint.json` is the config file that specifies conventions for this project.
+- `vendor` - for this project we're using [Semantic-UI](http://semantic-ui.com/) for the CSS. We've included the CSS files from Semantic here.
+- `resources` - this is where we store a few images
