@@ -9,7 +9,13 @@
     "removeComments": false,
     "noImplicitAny": false
   },
+  "files": [
+    "app.ts",
+    "typings/browser.d.ts"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "typings/main.d.ts",
+    "typings/main"
   ]
 }
