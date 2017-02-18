@@ -1,4 +1,6 @@
-import {Component, EventEmitter} from "@angular/core";
+import {Component, EventEmitter, NgModule} from "@angular/core";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import {BrowserModule} from "@angular/platform-browser";
 
 /**
  * Provides a `Product` object
@@ -43,7 +45,7 @@ class ProductRow {
   host: {
     'class': 'ui small image'
   },
-  template: `<img class="product-image" [src]="product.imageUrl">`
+  template: `<img class="product-image" [src]="product.imageUrl" src="#">`
 })
 class ProductImage {
   product: Product;
@@ -52,7 +54,7 @@ class ProductImage {
 @Component({
   selector: 'price-display',
   inputs: ['price'],
-  template: `<div class="price-display">{{price}}</div>`
+  template: `<div class="price-display">{{price}} dollars</div>`
 })
 class PriceDisplay {
   price: number;
@@ -176,5 +178,20 @@ class InventoryApp {
   }
 }
 
+@NgModule({
+  declarations: [
+      InventoryApp,
+      ProductsList,
+      ProductRow,
+      ProductImage,
+      ProductDepartment,
+      PriceDisplay
+  ],
+  imports: [BrowserModule],
+  bootstrap: [InventoryApp]
+})
+class InventoryAppModule {
 
-// bootstrap(InventoryApp);
+}
+
+platformBrowserDynamic().bootstrapModule(InventoryAppModule);
